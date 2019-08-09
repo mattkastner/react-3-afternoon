@@ -20,11 +20,16 @@ export default class Edit extends Component {
   }
 
   updatePost() {
+    this.props.updatePostFn(this.props.id, this.state.text)
+    console.log(this.props.id)
+    this.props.hideEdit()
+    // console.log(this.props.text)
 
   }
 
   render() {
     // More destructuring!
+    console.log(this.state.text)
     const { hideEdit } = this.props;
     const { text } = this.state;
 
